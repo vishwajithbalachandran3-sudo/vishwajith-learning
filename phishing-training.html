@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Spot the Signal | Phishing Simulation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="phishing-training.css">
+  <link rel="stylesheet" href="result-pictures.css">
+</head>
+<body>
+  <a class="skip" href="#course">Skip to course</a>
+  <header><a href="index.html" class="brand"><span>V</span> Vishwa Learning Design</a><div class="course-name"><i></i> Spot the Signal</div><button id="exit" class="exit">Exit course</button></header>
+  <main id="course">
+    <section id="welcome" class="screen welcome active">
+      <div class="welcome-copy"><p class="eyebrow">SECURITY AWARENESS · 8 MINUTES</p><h1>Can you spot<br>the <em>signal?</em></h1><p>Step into a realistic employee inbox. Investigate five messages, make a decision, and learn the small signals that reveal a big risk.</p><div class="objectives"><b>By the end, you can:</b><span>01 &nbsp; Inspect sender, context, and requested action</span><span>02 &nbsp; Respond safely to suspicious messages</span><span>03 &nbsp; Report potential phishing attempts</span></div><button class="primary" data-action="start">Enter the inbox <span>→</span></button><small>This fictional simulation does not collect or transmit personal information.</small></div>
+      <div class="hero-art" aria-hidden="true"><div class="mail-card"><span class="sender">IT</span><div><b>Password expires today</b><small>it-helpdesk@support-login.example</small></div><i>!</i></div><div class="magnifier"></div><div class="signal s1"></div><div class="signal s2"></div><div class="signal s3"></div></div>
+    </section>
+
+    <section id="simulation" class="screen simulation">
+      <aside class="sidebar"><div class="avatar">VL</div><nav aria-label="Mailbox"><button class="selected">▣ <span>Inbox</span><b>8</b></button><button>☆ <span>Flagged</span></button><button>⌁ <span>Reported</span><b id="reported-count">0</b></button></nav><div class="tip"><b>Investigator tip</b><p>Urgency alone does not prove an email is malicious. Look at the complete context.</p></div></aside>
+      <div class="mailbox"><div class="mailbox-head"><div><p class="eyebrow">SIMULATION</p><h2>Inbox</h2></div><div class="status"><span id="progress-label">0 of 8 reviewed</span><div><i id="progress-bar"></i></div></div></div><div id="message-list" class="message-list"></div></div>
+      <article id="email-panel" class="email-panel"><div class="empty-state"><div>✉</div><h3>Select a message</h3><p>Review the details, investigate possible warning signs, and choose the safest response.</p></div></article>
+    </section>
+
+    <section id="results" class="screen results"><div class="result-card"><div id="result-ring" class="result-ring"><span><strong id="score">0%</strong><small>final score</small></span></div><p class="eyebrow">SIMULATION COMPLETE</p><h2 id="result-title">Signal spotted.</h2><p id="result-message"></p><div class="result-stats"><div><strong id="correct-stat">0/5</strong><span>Correct decisions</span></div><div><strong id="clue-stat">0</strong><span>Clues explored</span></div><div><strong id="report-stat">0</strong><span>Threats reported</span></div></div><div class="takeaway"><b>Use the 3-second pause</b><ol><li><span>1</span>Check who really sent it.</li><li><span>2</span>Question the pressure and requested action.</li><li><span>3</span>Verify elsewhere before clicking or sharing information.</li></ol></div><div class="result-actions"><button class="primary" data-action="restart">Try again</button><a href="index.html">Return to portfolio →</a></div></div></section>
+  </main>
+  <dialog id="exit-dialog"><h2>Leave the simulation?</h2><p>Your progress will not be saved.</p><div><button id="cancel-exit">Keep learning</button><a href="index.html">Exit to portfolio</a></div></dialog>
+  <script src="phishing-training.js"></script>
+</body>
+</html>
