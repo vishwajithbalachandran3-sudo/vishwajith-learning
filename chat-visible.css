@@ -19,6 +19,15 @@
   z-index: 2147483647 !important;
 }
 
+.chat-messages > .chat-message.bot:first-child {
+  font-size: 0;
+}
+
+.chat-messages > .chat-message.bot:first-child::after {
+  content: "Hi, how can I help you?";
+  font-size: 12px;
+}
+
 @media (max-width: 600px) {
   .chat-launcher {
     min-width: 132px;
