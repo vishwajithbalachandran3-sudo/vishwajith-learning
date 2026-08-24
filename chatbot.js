@@ -1,5 +1,6 @@
 (() => {
   const topics = [
+    { keys: ['what is this', 'what is thecybersol', 'what do you do', 'about thecybersol'], summary: 'thecybersol provides two AI-powered solutions: Cybersecurity Operations for detecting and responding to threats, and Jira AI Integration for automating ticket workflows.', benefit: 'It helps teams complete repetitive operational work faster, organize information clearly, and focus people on higher-value decisions. Cyber teams can respond to threats sooner, while Jira teams can reduce manual ticket handling.' },
     { keys: ['cyber', 'security', 'threat', 'soc'], summary: 'Our Cybersecurity Operations platform unifies detection, investigation, automation, exposure management, and security data.', benefit: 'It helps security teams reduce alert noise, investigate incidents faster, and coordinate response from one place. That means less manual work and quicker containment of real threats.' },
     { keys: ['jira', 'ticket', 'workflow'], summary: 'The Jira AI Integration creates, enriches, prioritizes, and routes Jira issues through intelligent virtual agents. It also supports status synchronization and clear audit trails.', benefit: 'It reduces repetitive ticket work, improves routing accuracy, and keeps Jira records current. Teams spend less time updating issues and more time resolving them.' },
     { keys: ['alert iq', 'alertiq', 'analyst', 'agent'], summary: 'Alert iQ is our AI security teammate. It investigates alerts, builds attack timelines, recommends response actions, and works across identity, endpoint, cloud, and network signals.', benefit: 'Alert iQ gives analysts a faster, clearer starting point for every incident. It correlates signals, explains what happened, and recommends next steps—reducing investigation time while keeping people in control of important decisions.' }
@@ -30,7 +31,7 @@
     const query = question.toLowerCase().trim();
     const topic = topics.find(item => item.keys.some(key => query.includes(key)));
     if (topic) { activeTopic = topic; return topic.summary; }
-    const followUp = ['useful', 'benefit', 'help me', 'why', 'value', 'advantage'].some(key => query.includes(key));
+    const followUp = ['useful', 'benefit', 'help', 'why', 'value', 'advantage'].some(key => query.includes(key));
     if (followUp && activeTopic) return activeTopic.benefit;
     const direct = directAnswers.find(item => item.keys.some(key => query.includes(key)));
     if (direct) return direct.text;
