@@ -1,0 +1,28 @@
+.chat-launcher {
+  z-index: 2147483646 !important;
+  width: auto !important;
+  min-width: 148px;
+  height: 56px !important;
+  padding: 0 20px !important;
+  display: flex !important;
+  gap: 10px;
+  border-radius: 999px !important;
+  font: 700 13px Manrope, sans-serif;
+}
+
+.chat-launcher::after {
+  content: "Chat with us";
+  white-space: nowrap;
+}
+
+.chat-panel {
+  z-index: 2147483647 !important;
+}
+
+@media (max-width: 600px) {
+  .chat-launcher {
+    min-width: 132px;
+    height: 52px !important;
+    padding: 0 16px !important;
+  }
+}
